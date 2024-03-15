@@ -1,17 +1,22 @@
+import { useState } from "react";
 import "./Header.css";
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+  const ShowMenu = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <header className="header">
       <nav className="nav container">
         <a href="" className="nav-logo">
-          Afshar
+          Afshari
         </a>
-
-        <div className="nav-menu">
+        <div className={toggle ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
             <li className="nav-item">
               <a href="#home" className="nav-link active-link">
-                <i className="bi bi-house-door-fill nav-icon"></i>
+                <i className="bi bi-house nav-icon"></i>
                 Home
               </a>
             </li>
@@ -46,9 +51,9 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <i className="bi bi-x nav-close"></i>
+          <i onClick={ShowMenu} className="bi bi-x nav-close"></i>
         </div>
-        <div className="nav-toggle">
+        <div onClick={ShowMenu} className="nav-toggle" >
           <i className="bi bi-grid"></i>
         </div>
       </nav>

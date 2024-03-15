@@ -92,7 +92,7 @@ Services
 What i offer
 
 .services__title
-Product <br> Designer
+  Product <br> Designer
 
 Ui/Ux <br> Designer
 

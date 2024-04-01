@@ -5,7 +5,7 @@ import './About.css'
 
 function About() {
   return (
-    <section className="section about" id="About">
+    <section className="section about" id="about">
       <h2 className="section-title">About Me</h2>
       <span className="section-sub">My introduction</span>
       <div className="about-container container grid">

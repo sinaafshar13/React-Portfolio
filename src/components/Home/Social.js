@@ -3,8 +3,8 @@ import React from "react";
 function Social() {
   return (
     <div className="home-social">
-      <a href="https://t.me/SiNa13RiShe" className="home-social-icon" target="_blank">
-        <i className="bi bi-send"></i>
+      <a href="https://t.me/Cryptocoder19" className="home-social-icon" target="_blank">
+        <i className="bi bi-telegram"></i>
       </a>
       <a href="https://github.com/sinaafshar13" className="home-social-icon" target="_blank">
         <i className="bi bi-github"></i>

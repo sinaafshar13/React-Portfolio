@@ -1,0 +1,44 @@
+.scroll-up {
+  background-color: var(--title-color);
+  padding: 0.4rem 0.5rem 0.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  position: fixed;
+  bottom: -20%;
+  right: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.4s;
+  &:hover {
+    background-color: var(--title-color-dark);
+  }
+  z-index: var(--z-tooltip);
+  opacity: 0.9;
+}
+.scroll-up-icon {
+  font-size: 1.5rem;
+  color: var(--container-color);
+}
+.show-scroll {
+  bottom: 30px;
+}
+@media screen and (max-width: 992px) {
+  .scroll-up {
+    right: 20px;
+    padding: 0.2rem 0.4rem 0.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .show-scroll {
+    bottom: 60px;
+  }
+  .scroll-up-icon {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .scroll-up {
+    right: 15px;
+  }
+}

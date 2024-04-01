@@ -27,7 +27,7 @@ function LandingPage() {
       </main>
       <Footer />
       <ScrollUp />
-    </>
+     </>
   );
 }
 export default LandingPage;

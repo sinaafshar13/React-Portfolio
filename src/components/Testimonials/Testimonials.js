@@ -28,7 +28,7 @@ const Testimonials = () => {
     {
       id: 3,
       img: Image3,
-      title: "Sara Cill",
+      title: "Sara Chill",
       desc: "A really good job, all aspects of the project were followed step by step and with good results.",
     },
   ];

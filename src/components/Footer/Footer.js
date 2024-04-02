@@ -39,7 +39,7 @@ const Footer = () => {
             <i className="bi bi-linkedin"></i>
           </a>
         </div>
-        <span className="footer-copy">&#169; Cryptocoder19. All rigths reserved</span>
+        <span className="footer-copy">&#169; Cryptocoder19. All rights reserved</span>
       </div>
     </footer>
   );

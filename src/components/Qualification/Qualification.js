@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Qualification.css";
 const Qualification = () => {
-  const [qualToggle, setQualtoggle] = useState(1);
+  const [qualToggle, setQualToggle] = useState(1);
   const Qual = (index) => {
-    setQualtoggle(index);
+    setQualToggle(index);
   };
   return (
     <section className="section qualification" id="qualification">
       <h2 className="section-title">Qualification</h2>
-      <span className="section-sub">My personel journey</span>
+      <span className="section-sub">My personal journey</span>
       <div className="qualification-container container">
         <div className="qualification-tab">
           <div
@@ -21,7 +21,7 @@ const Qualification = () => {
                 : "qualification-button button-flex"
             }
           >
-            <i className="bi bi-mortarboard qualification-icon"></i>Eduacation
+            <i className="bi bi-mortarboard qualification-icon"></i>Education
           </div>
           <div
             onClick={() => {
@@ -46,10 +46,10 @@ const Qualification = () => {
           >
             <div className="qualification-data">
               <div>
-                <h3 className="qualification-title">Saftware Engineer</h3>
-                <div className="qualification-sub">Hamedan - University</div>
+                <h3 className="qualification-title">Software Engineer</h3>
+                <div className="qualification-sub">Hamadan - University</div>
                 <div className="qualification-calender">
-                  <i className="bx bx-calendar"></i>2021 - peresent
+                  <i className="bx bx-calendar"></i>2021 - present
                 </div>
               </div>
               <div>
@@ -112,7 +112,7 @@ const Qualification = () => {
                 <h3 className="qualification-title">Frontend Developer</h3>
                 <div className="qualification-sub">Freelance - Tehran</div>
                 <div className="qualification-calender">
-                  <i className="bx bx-calendar"></i>2024 - peresent
+                  <i className="bx bx-calendar"></i>2024 - present
                 </div>
               </div>
               <div>

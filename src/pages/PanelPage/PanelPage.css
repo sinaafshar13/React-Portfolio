@@ -1,0 +1,20 @@
+.panel-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin: 2rem 0 1rem;
+}
+.panel-filter {
+  color: var(--title-color);
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+/* active panel */
+
+.panel-filter-active {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}

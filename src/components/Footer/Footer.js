@@ -7,13 +7,19 @@ const Footer = () => {
         <h1 className="footer-title">Sina Afshari</h1>
         <ul className="footer-list">
           <li>
-            <a href="#about" className="fooeter-link">About</a>
+            <a href="#about" className="footer-link">
+              About
+            </a>
           </li>
           <li>
-            <a href="#portfolio" className="fooeter-link">Project</a>
+            <a href="#portfolio" className="footer-link">
+              Project
+            </a>
           </li>
           <li>
-            <a href="#testimonials" className="fooeter-link">Testimonials</a>
+            <a href="#testimonial" className="footer-link">
+              Testimonials
+            </a>
           </li>
         </ul>
         <div className="footer-social">
@@ -39,7 +45,9 @@ const Footer = () => {
             <i className="bi bi-linkedin"></i>
           </a>
         </div>
-        <span className="footer-copy">&#169; Cryptocoder19. All rights reserved</span>
+        <span className="footer-copy">
+          &#169; Cryptocoder19. All rights reserved
+        </span>
       </div>
     </footer>
   );

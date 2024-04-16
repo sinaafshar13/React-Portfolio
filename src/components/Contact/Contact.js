@@ -27,7 +27,7 @@ const Contact = () => {
       <span className="section-sub">Get in touch</span>
       <div className="contact-container container">
         <div className="contact-socials">
-          <h2 className="conatct-header">Talk to me</h2>
+          <h2 className="contact-header">Talk to me</h2>
           <div className="social-boxs">
             <div className="social-box">
               <i className="bx bx-mail-send social-box-icon"></i>
@@ -58,8 +58,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="conatct-form">
-          <h2 className="conatct-header">Write me your project</h2>
+        <div className="contact-form">
+          <h2 className="contact-header">Write me your project</h2>
           <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="contact-form-div">
               <label htmlFor="name" className="contact-form-tag">

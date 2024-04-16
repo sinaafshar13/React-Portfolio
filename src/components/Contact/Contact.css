@@ -5,7 +5,7 @@
   column-gap: 6rem;
   padding-bottom: 3rem;
 }
-.conatct-header {
+.contact-header {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
@@ -58,12 +58,13 @@
 .Social-button:hover .social-button-icon {
   transform: translateX(0.25rem);
 }
-.conatct-form {
+.contact-form {
   width: 360px;
 }
 .contact-form-div {
   position: relative;
   height: 4rem;
+  margin-bottom: var(--mb-0-5);
 }
 .contact-form-input {
   position: absolute;
@@ -114,7 +115,7 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .conatct-form {
+  .contact-form {
     width: 100%;
   }
 }

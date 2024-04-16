@@ -9,8 +9,6 @@ import ScrollUp from "../../components/ScrollUp/ScrollUp";
 import Services from "../../components/Services/Services";
 import Skills from "../../components/Skills/Skills";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import "./LandingPage.css";
-
 function LandingPage() {
   return (
     <>
@@ -27,7 +25,7 @@ function LandingPage() {
       </main>
       <Footer />
       <ScrollUp />
-     </>
+    </>
   );
 }
 export default LandingPage;

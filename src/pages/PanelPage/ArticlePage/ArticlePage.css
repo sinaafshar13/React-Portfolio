@@ -1,0 +1,111 @@
+.articlePage-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 300px 2fr;
+  column-gap: 2rem;
+}
+
+/* not sure */
+.articleBio-card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  overflow: hidden;
+  position: sticky;
+  top: 8rem; 
+  z-index: 10;
+}
+.articleBio-content {
+  background-color: var(--container-color);
+  padding: 0 0.5rem 0.25rem;
+}
+.articleBio-img {
+  margin-bottom: var(--mb-0-25);
+}
+.articleBio-title {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+}
+.articleBio-desc {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-1);
+}
+.articleBio-info {
+  font-size: var(--smaller-font-size);
+}
+.articleBio-info-icon {
+  margin-right: var(--mb-0-25);
+  font-size: var(--normal-font-size);
+}
+.articleBio-info li {
+  margin-bottom: var(--mb-0-25);
+}
+.articleBio-info span {
+  font-weight: var(--font-medium);
+}
+.articleBio-button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--mb-2) 0 var(--mb-1);
+}
+.articleBio-button {
+  font-size: var(--smaller-font-size);
+  padding: 1.1em 2.8em;
+  border-radius: 0.5rem;
+}
+.articleBio-button Link {
+  align-items: center;
+  color: var(--container-color);
+}
+.articleBio-button-delete {
+  font-size: var(--smaller-font-size);
+  padding: 1.1em 2.8em;
+  border-radius: 0.5rem;
+  background-color: #fff; 
+  color: #000;
+  border: 1px solid var(--title-color);
+  padding: 1em 2em;
+  transition: all 0.2s;
+}
+.articleBio-button-delete:hover {
+  background-color: rgb(255, 0, 0); /* Change background color on hover */
+  color: var(--container-color);
+  border-color: red;
+}
+.articlePage-content {
+  text-align: justify;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+.articlePage-content::first-letter {
+  color: black;
+  initial-letter: 3;
+}
+.articleBio-button-icon {
+  margin-left: var(--mb-0-5);
+ font-size: var(--h3-font-size);
+}
+@media screen and (max-width: 768px) {
+  .articlePage-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .articleBio-card {
+  width: 70vw;
+  margin: 0 auto;
+  } 
+}
+@media screen and (max-width: 350px) {
+  .articleBio-button {
+    font-size: var(--smaller-font-size);
+    padding: .75em 1.5em;
+    border-radius: 0.5rem;
+  }
+  .articleBio-button-delete {
+   
+    padding: .75em 1em;
+  }
+}

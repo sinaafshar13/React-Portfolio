@@ -1,0 +1,85 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "First Article Title",
+      "desc": "This is a simple desc of the first article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfdHJlly3In1jY9wOLOn2bJp7sDApfHA4y3zMKIbC0uk8NpC0Fce1iMCBfaIOEm6yD54&usqp=CAU",
+      "readingTime": 5,
+      "category": "web",
+      "writer": "Sina Afshari"
+    },
+    {
+      "id": "2",
+      "title": "Second Article Title",
+      "desc": "This is a simple desc of the second article.",
+      "image": "https://picjumbo.com/wp-content/uploads/busy-designer-minimalist-workplace-desk-free-photo.jpg",
+      "readingTime": "12",
+      "category": "web",
+      "writer": "Nika Afshari"
+    },
+    {
+      "id": "3",
+      "title": "Third Article Title",
+      "desc": "This is a simple desc of the Third article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShM1VfauOK0u4SCiGz2xBeldAbp8bxCpREPLb01f1AzNBQTwt-fBXgRz1Tk5vsFwdU2i4&usqp=CAU",
+      "readingTime": 7,
+      "category": "web",
+      "writer": "Ashkan Zarabi"
+    },
+    {
+      "id": "4",
+      "title": "Fourth Article Title",
+      "desc": "This is a simple desc of the Fourth article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5ZYOPhjAN1Opl6XWO35EJNndhQXl1Co1h4-0-172qQAdos__1gXtLlXEUbWtDNPUixE&usqp=CAU",
+      "readingTime": 9,
+      "category": "app",
+      "writer": "Erfan Zaree"
+    },
+    {
+      "id": "5",
+      "title": "fifth Article Title",
+      "desc": "This is a simple desc of the fifth article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVS3Lcrwz-NP5WeMjFjSBp8jCYDV03X_oOxHTs7BXgeZ1SPQPF8A_m-bjnpOqmJLI6_4&usqp=CAU",
+      "readingTime": 12,
+      "category": "web",
+      "writer": "Ali Sorena"
+    },
+    {
+      "id": "6",
+      "title": "sixth Article Title",
+      "desc": "This is a simple desc of the sixth article.",
+      "image": "https://www.theminimalists.com/wp-content/uploads/2019/08/luca-bravo-9l_326FISzk-unsplash-2.jpg",
+      "readingTime": 4,
+      "category": "support",
+      "writer": "Saul Goodman"
+    },
+    {
+      "id": "7",
+      "title": "seventh Article Title",
+      "desc": "This is a simple desc of the seventh article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvNOp4ZEph3xRprH70H3vS1FjWZMqBQKmC_DF3vW3eIlXiAhnP6lEM1fNlxDfHqPASdus&usqp=CAU",
+      "readingTime": 5,
+      "category": "app",
+      "writer": "Kimberly Wexler"
+    },
+    {
+      "id": "8",
+      "title": "Eighth Article Title",
+      "desc": "This is a simple desc of the Eighth article.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GSNBvTaQlDwaVybYfCKla8bNkfXs2rb6MwOEQyGM4NsgT4SiYpa4lVDwTdijW9F3ie8&usqp=CAUhttps://dl.next1code.ir/images/react/article8.webp",
+      "readingTime": 9,
+      "category": "support",
+      "writer": "Nariman Cupid"
+    },
+    {
+      "id": "07db",
+      "title": "ninth",
+      "desc": "This is a simple desc of the Fourth article.",
+      "writer": "Walter White",
+      "category": "web",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShM1VfauOK0u4SCiGz2xBeldAbp8bxCpREPLb01f1AzNBQTwt-fBXgRz1Tk5vsFwdU2i4&usqp=CAU",
+      "readingTime": "12"
+    }
+  ]
+}

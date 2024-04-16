@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Mixitup from "mixitup";
+import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
 import work1 from "../../assets/work1.jpg"; // Import images
@@ -30,6 +31,14 @@ const Portfolio = () => {
   const Modal = (index) => {
     setModalToggle(index);
   };
+  // target page scroll specific id
+  // TODO useEffect(() => {
+  //   // Scroll to the specific ID after changing the page
+  //   const element = document.getElementById("portfolio");
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, []);
   return (
     <section className="section portfolio" id="portfolio">
       <h2 className="section-title"> Portfolio </h2>
@@ -132,7 +141,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                      <Link to="/portfolio/1">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>
@@ -191,7 +200,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                      <Link to="/portfolio/2">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>
@@ -250,7 +259,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                      <Link to="/portfolio/3">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>
@@ -261,13 +270,22 @@ const Portfolio = () => {
         <div className="portfolio-card all web">
           <img className="card-img" src={work4} alt="" />
           <h3 className="card-title">Web Development</h3>
-          <span onClick = {() => {
-                  Modal(4);
-                }} className="card-button">
+          <span
+            onClick={() => {
+              Modal(4);
+            }}
+            className="card-button"
+          >
             Demo
             <i className="bx bx-right-arrow-alt card-button-icon"></i>
           </span>
-          <div className={modalToggle === 4 ? "portfolio-modal active-modal" : "portfolio-modal "}>
+          <div
+            className={
+              modalToggle === 4
+                ? "portfolio-modal active-modal"
+                : "portfolio-modal "
+            }
+          >
             <div className="portfolio-card-details">
               <i
                 onClick={() => {
@@ -300,7 +318,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                      <Link to="/portfolio/4">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>
@@ -311,13 +329,22 @@ const Portfolio = () => {
         <div className="portfolio-card all app">
           <img className="card-img" src={work5} alt="" />
           <h3 className="card-title">Web Development</h3>
-          <span onClick = {() => {
-                  Modal(5);
-                }} className="card-button">
+          <span
+            onClick={() => {
+              Modal(5);
+            }}
+            className="card-button"
+          >
             Demo
             <i className="bx bx-right-arrow-alt card-button-icon"></i>
           </span>
-          <div className={modalToggle === 5 ? "portfolio-modal active-modal" : "portfolio-modal "}>
+          <div
+            className={
+              modalToggle === 5
+                ? "portfolio-modal active-modal"
+                : "portfolio-modal "
+            }
+          >
             <div className="portfolio-card-details">
               <i
                 onClick={() => {
@@ -350,7 +377,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                    <Link to="/portfolio/5">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>
@@ -361,13 +388,22 @@ const Portfolio = () => {
         <div className="portfolio-card all support">
           <img className="card-img" src={work2} alt="" />
           <h3 className="card-title">Web Development</h3>
-          <span onClick = {() => {
-                  Modal(6);
-                }} className="card-button">
+          <span
+            onClick={() => {
+              Modal(6);
+            }}
+            className="card-button"
+          >
             Demo
             <i className="bx bx-right-arrow-alt card-button-icon"></i>
           </span>
-          <div className={modalToggle === 6 ? "portfolio-modal active-modal" : "portfolio-modal "}>
+          <div
+            className={
+              modalToggle === 6
+                ? "portfolio-modal active-modal"
+                : "portfolio-modal "
+            }
+          >
             <div className="portfolio-card-details">
               <i
                 onClick={() => {
@@ -400,7 +436,7 @@ const Portfolio = () => {
                   <li>
                     View -{" "}
                     <span>
-                      <a href="#">www.domain.com</a>
+                    <Link to="/portfolio/6">www.domain.com</Link>
                     </span>
                   </li>
                 </ul>

@@ -4,8 +4,9 @@
   top: 1.5rem;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: transparent;
 }
+/* scroll behavior for header */
 .header-border {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   top: 0;
@@ -15,6 +16,8 @@
     padding: initial;
   }
   transition: all 0.7s;
+  background-color: var(--body-color);
+
 }
 .nav {
   height: calc(var(--header-height) + 1.5rem);
@@ -23,6 +26,7 @@
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 3rem;
+  
   padding: 0 3rem;
   transition: all 0.7s;
 }
@@ -59,6 +63,7 @@
   .header {
     top: initial;
     bottom: 0;
+    background-color: var(--body-color);
   }
   .nav {
     height: var(--header-height);

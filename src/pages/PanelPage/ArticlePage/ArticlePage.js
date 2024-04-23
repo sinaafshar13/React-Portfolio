@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../../components/Footer/Footer";
-import Header from "../../../components/Header/Header";
+import PanelHeader from "../../../components/PanelHeader/PanelHeader"
 import ScrollUp from "../../../components/ScrollUp/ScrollUp";
 import "./ArticlePage.css";
 import axios from "axios";
-import ArticleItem from "../Articles/ArticleItem";
 import ArticleBio from "./ArticleBio";
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
@@ -13,14 +12,14 @@ const ArticlePage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/articles/${articleId}`)
-      .then((response) => setArticle(response.data))
+      .get(`http://localhost/react/api/articles/?id=${articleId}`)
+      .then((response) => setArticle(response.data.data[0]))
       .catch((error) => console.error("Error fetching article:", error));
   }, []);
 
   return (
     <>
-      <Header />
+      <PanelHeader />
       <main className="main section">
         <div className="articlePage-container container">
           <div className={`all ${article.category}`}>

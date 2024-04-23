@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ArticleItem = ({
   id,
   title,
-  desc,
+  description,
   image,
   readingTime,
   writer,
@@ -18,7 +18,7 @@ const ArticleItem = ({
       <img className="article-img" src={image} alt="" />
       <div className="article-content">
         <h3 className="article-title">{title}</h3>
-        <p className="article-desc">{desc}</p>
+        <p className="article-desc">{description}</p>
         <Link to={`/panelPage/articlePage/${id}`} className="article-button">
           {" "}
           View article

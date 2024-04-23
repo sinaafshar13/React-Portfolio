@@ -13,7 +13,7 @@ const AddArticle = () => {
     setFormData({
       title: "",
       writer: "",
-      desc: "",
+      description: "",
       image: "",
       readingTime: "",
       category: "",
@@ -28,7 +28,7 @@ const AddArticle = () => {
     // Check if any required field is empty
     const requiredFields = [
       "title",
-      "desc",
+      "description",
       "writer",
       "category",
       "image",
@@ -42,10 +42,11 @@ const AddArticle = () => {
       return; // Stop further execution
     }
     axios
-      .post("http://localhost:5000/articles", formData)
+      .post("http://localhost/react/api/articles/", formData)
       .then((response) => {
-        if (response.status === 201) {
+        if (response.status === 200) {
           setModalToggle(1);
+          console.log(response.data);
         }
       })
       .catch((error) => {
@@ -105,8 +106,8 @@ const AddArticle = () => {
                 Description:{" "}
               </label>
               <input
-                name="desc"
-                value={formData.desc}
+                name="description"
+                value={formData.description}
                 onChange={formHandler}
                 type="text"
                 placeholder="Insert  description"

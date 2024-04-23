@@ -8,12 +8,29 @@ import AddArticle from "./pages/PanelPage/AddArticle/AddArticle";
 import EditArticle from "./pages/PanelPage/EditArticle/EditArticle";
 import Articles from "./pages/PanelPage/Articles/Articles";
 import ArticlePage from "./pages/PanelPage/ArticlePage/ArticlePage";
+import JourneyJournal from "./pages/JourneyJournal/JourneyJournal";
+import ArticlesList from "./pages/ArticlesList/ArticlesList";
 
 const routes = [
   { path: "/", element: <LandingPage /> },
   { path: "/loginPage", element: <LogInPage /> },
   { path: "/portfolio/:portfolioId", element: <PortfolioPages /> },
-
+  {
+    path: "/JourneyJournal",
+    element: (
+      <PrivateRoutes>
+        <JourneyJournal />
+      </PrivateRoutes>
+    ),
+  },
+  {
+    path: "/articlesList",
+    element: (
+      <PrivateRoutes>
+        <ArticlesList />
+      </PrivateRoutes>
+    ),
+  },
   {
     path: "/panelPage/*",
     element: (
@@ -38,7 +55,6 @@ const routes = [
           </PrivateRoutes>
         ),
       },
-     
     ],
   },
   {
@@ -47,7 +63,7 @@ const routes = [
       <PrivateRoutes>
         <ArticlePage />
       </PrivateRoutes>
-    )
+    ),
   },
   {
     path: "/panelPage/editArticle/:articleId",
@@ -55,8 +71,8 @@ const routes = [
       <PrivateRoutes>
         <EditArticle />
       </PrivateRoutes>
-    )
-  }
+    ),
+  },
 ];
 
 export default routes;

@@ -8,8 +8,8 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/articles")
-      .then((response) => setArticles(response.data));
+      .get("http://localhost/react/api/articles/")
+      .then((response) => setArticles(response.data.data));
   }, []);
   // TODO mixitup
   useEffect(() => {
@@ -83,7 +83,7 @@ const Articles = () => {
         {articles.map((article) => (
           <div
             key={article.id}
-            className={`all ${article.category}`}
+            className={`articles-card all ${article.category}`}
             data-filter={article.category}
           >
             <ArticleItem {...article} />

@@ -1,6 +1,6 @@
 import Footer from "../../../components/Footer/Footer";
-import Header from "../../../components/Header/Header";
 import ScrollUp from "../../../components/ScrollUp/ScrollUp";
+import PanelHeader from "../../../components/PanelHeader/PanelHeader"
 import React, { useState, useEffect } from "react";
 import "../AddArticle/AddArticle.css";
 import axios from "axios";
@@ -14,8 +14,8 @@ const EditArticle = () => {
   const { articleId } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/articles/${articleId}`)
-      .then((response) => setFormData(response.data))
+      .get(`http://localhost/react/api/articles/?id=${articleId}`)
+      .then((response) => setFormData(response.data.data[0]))
       .catch((error) => console.error("Error fetching article:", error));
   }, []);
   const [formData, setFormData] = useState({});
@@ -23,12 +23,12 @@ const EditArticle = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const articleHandler = () => {
-    axios.put(`http://localhost:5000/articles/${articleId}`, formData);
+    axios.put(`http://localhost/react/api/articles/?id=${articleId}`, formData);
     setModalToggle(1);
   };
   return (
     <>
-      <Header />
+      <PanelHeader />
       <main className="main section mt-3">
         <section className="addArticle-page" id="addArticle-page">
           <div className="addArticle">
@@ -75,12 +75,12 @@ const EditArticle = () => {
                   />
                 </div>
                 <div className="addArticle-input">
-                  <label htmlFor="desc" className="addArticle-form-tag">
+                  <label htmlFor="description" className="addArticle-form-tag">
                     Description:{" "}
                   </label>
                   <input
-                    name="desc"
-                    value={formData.desc}
+                    name="description"
+                    value={formData.description}
                     onChange={formHandler}
                     type="text"
                     placeholder="Insert  description"

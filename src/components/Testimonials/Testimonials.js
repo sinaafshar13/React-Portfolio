@@ -34,8 +34,8 @@ const Testimonials = () => {
   ];
   return (
     <section className="section testimonial" id="testimonial">
-      <h2 className="section-title">My clients say</h2>
-      <span className="section-sub">Testimonials</span>
+      <h2 className="section-title">Testimonials</h2>
+      <span className="section-sub">My Clients say</span>
       <Swiper
         className="testimonial-container"
         loop={true}

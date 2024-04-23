@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const ArticleBio = ({
   id,
   title,
-  desc,
+  description,
   image,
   readingTime,
   writer,
@@ -24,7 +24,7 @@ const ArticleBio = ({
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/articles/${id}`)
+          .delete(`http://localhost/react/api/articles/?id=${id}`)
           .then((res) => {
             console.log(res);
           })
@@ -47,7 +47,7 @@ const ArticleBio = ({
       <img className="articleBio-img" src={image} alt="" />
       <div className="articleBio-content">
         <h3 className="articleBio-title">{title}</h3>
-        <p className="articleBio-desc">{desc}</p>
+        <p className="articleBio-desc">{description}</p>
         <ul className="articleBio-info">
           <li>
             <i className="bx bx-edit-alt articleBio-info-icon"></i>

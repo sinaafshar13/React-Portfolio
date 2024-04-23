@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Header.css";
+import "./PanelHeader.css";
 import { Link } from "react-router-dom";
 import { isLogin } from "../../utils";
 const Header = () => {
@@ -47,61 +47,37 @@ const Header = () => {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a
+            <li className="nav-item" >
+              <Link 
                 onClick={() => {
-                  activeLink("#about");
+                  activeLink("#Journey-Journal");
                 }}
-                href="#about"
+                to="/journeyJournal"
                 className={
-                  active === "#about" ? "nav-link active-link" : "nav-link"
+                  active === "#Journey-Journal"
+                    ? "nav-link active-link"
+                    : "nav-link"
                 }
               >
-                <i className="bi bi-person-vcard nav-icon"></i>
-                About
-              </a>
+                <i className="bi bi-journal-bookmark nav-icon"></i>
+                Journey Journal
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 onClick={() => {
-                  activeLink("#services");
+                  activeLink("#articles-list");
                 }}
-                href="/#services"
+                to="/articlesList"
                 className={
-                  active === "#services" ? "nav-link active-link" : "nav-link"
+                  active === "#articles-list"
+                    ? "nav-link active-link"
+                    : "nav-link"
                 }
               >
-                <i className="bi bi-briefcase  nav-icon"></i>
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                onClick={() => {
-                  activeLink("#portfolio");
-                }}
-                href="#portfolio"
-                className={
-                  active === "#portfolio" ? "nav-link active-link" : "nav-link"
-                }
-              >
-                <i className="bi bi-image nav-icon"></i>
-                Portfolio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                onClick={() => {
-                  activeLink("#contact");
-                }}
-                href="#contact"
-                className={
-                  active === "#contact" ? "nav-link active-link" : "nav-link"
-                }
-              >
-                <i className="bi bi-send nav-icon"></i>
-                Contact
-              </a>
+                <i className="bi bi-layout-text-sidebar nav-icon"></i>
+                Articles
+              </Link>
             </li>
             <li className="nav-item">
               {isLogin() ? (

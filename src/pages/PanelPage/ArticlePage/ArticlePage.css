@@ -5,15 +5,15 @@
   column-gap: 2rem;
 }
 
-/* not sure */
 .articleBio-card {
   background-color: var(--container-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   overflow: hidden;
   position: sticky;
-  top: 8rem; 
+  top: 8rem;
   z-index: 10;
 }
 .articleBio-content {
@@ -53,7 +53,7 @@
 }
 .articleBio-button {
   font-size: var(--smaller-font-size);
-  padding: 1.1em 2.8em;
+  padding: 1.1em 2.76em;
   border-radius: 0.5rem;
 }
 .articleBio-button Link {
@@ -62,9 +62,8 @@
 }
 .articleBio-button-delete {
   font-size: var(--smaller-font-size);
-  padding: 1.1em 2.8em;
   border-radius: 0.5rem;
-  background-color: #fff; 
+  background-color: #fff;
   color: #000;
   border: 1px solid var(--title-color);
   padding: 1em 2em;
@@ -86,7 +85,7 @@
 }
 .articleBio-button-icon {
   margin-left: var(--mb-0-5);
- font-size: var(--h3-font-size);
+  font-size: var(--h3-font-size);
 }
 @media screen and (max-width: 768px) {
   .articlePage-container {
@@ -94,18 +93,17 @@
     row-gap: 2rem;
   }
   .articleBio-card {
-  width: 70vw;
-  margin: 0 auto;
-  } 
+    width: 70vw;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 350px) {
   .articleBio-button {
     font-size: var(--smaller-font-size);
-    padding: .75em 1.5em;
+    padding: 0.75em 1.5em;
     border-radius: 0.5rem;
   }
   .articleBio-button-delete {
-   
-    padding: .75em 1em;
+    padding: 0.75em 1em;
   }
 }

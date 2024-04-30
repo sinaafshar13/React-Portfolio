@@ -28,6 +28,7 @@
 .swiper-pagination-bullet-active {
   background-color: var(--title-color-dark) !important;
 }
+
 @media screen and (max-width: 992px) {
   .testimonial-container {
     width: 80%;

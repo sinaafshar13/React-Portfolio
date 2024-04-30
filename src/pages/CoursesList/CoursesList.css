@@ -1,0 +1,231 @@
+.coursesList-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--mb-2) 0;
+    align-items: center;
+  }
+  .coursesList-search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container-input {
+    padding: 0.937rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: var(--smaller-font-size);
+  }
+  .search-container-button {
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem;
+    font-size: var(--smaller-font-size);
+  }
+  .search-container-button-icon {
+    font-size: var(--normal-font-size);
+    margin-right: var(--mb-0-5);
+  }
+  .coursesList-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 1rem;
+    padding-top: var(--mb-1);
+  }
+  .coursesList-section {
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: var(--mb-1);
+  }
+  .coursesList-section .empty-search-alert {
+    margin-top: var(--mb-1);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: var(--container-color);
+    font-size: var(--normal-font-size);
+    background-color: var(--text-color);
+  }
+   /* =====course-cards*======== */
+   .courses {
+    margin-top: 1rem;
+  }
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+  .courses-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.75rem;
+    margin-bottom: var(--mb-2);
+  }
+  .courses-filter {
+    color: var(--title-color);
+    cursor: pointer;
+    font-weight: var(--font-medium);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  
+  /* active work */
+  .courses-filter-active {
+    background-color: var(--title-color);
+    color: var(--container-color);
+  }
+  
+  /* Accordion.css */
+  .coursesList-accordion {
+    margin-top: var(--mb-1);
+  }
+  .accordion {
+    position: sticky;
+    top: 6rem;
+    z-index: 10;
+  }
+  .accordion-item {
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--title-color);
+    color: var(--container-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+  }
+  .accordion-header:hover,
+  .accordion-header.open {
+    background-color: var(--title-color-dark);
+  }
+  .accordion-header span {
+    float: right;
+  }
+  
+  .accordion-content {
+    background-color: #fff;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); /* Transition for smooth dropdown */
+  }
+  
+  .accordion-item .show-content {
+    max-height: 600px; /* Adjust this value to match your content's height */
+    transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+  }
+  
+  .accordion-content-texts {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--small-font-size);
+    padding: 0.25rem 1rem;
+  }
+  .accordion-content-text {
+    padding: 0 0.4rem;
+  }
+  .accordion-content-texts label {
+    display: flex;
+    align-items: center;
+  }
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
+  }
+  
+  input[type="radio"]:checked {
+    background-color: var(--title-color);
+    border-color: var(--title-color);
+  }
+  
+  @media screen and (max-width: 992px) {
+    .coursesList-container {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .coursesList-header-container {
+      display: block;
+      margin: 0 auto;
+      padding: var(--mb-2) 0;
+    }
+    .coursesList-search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+      .search-container-input {
+        padding: 0.5rem;
+      }
+      .search-container-button {
+        padding: 0.564rem;
+      }
+    }
+  
+    .coursesList-container {
+      grid-template-columns: repeat(2, 280px);
+    }
+    .coursesList-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding-top: var(--mb-1);
+    }
+  
+    .coursesList-accordion {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 0.5rem 0.5rem 0;
+      background-color: var(--body-color);
+    }
+    .accordion {
+      display: grid;
+      column-gap: 0.25rem;
+      justify-content: center;
+      grid-template-columns: repeat(3 , max-content);
+    }
+    .accordion-header span {
+      margin-left: 2rem;
+    }
+    .accordion-content {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+  
+      background-color: var(--body-color);
+      padding: 2rem 1.5rem 4rem;
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 1.5rem 1.5rem 0 0;
+      transition: all 0.3s;
+    }
+    .accordion-item .show-content {
+      transition: all 0.3s;
+      bottom: 0;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .coursesList-container {
+      grid-template-columns: repeat(1, 300px);
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .coursesList-container {
+      grid-template-columns: repeat(1, 200px);
+    }
+  }
+  

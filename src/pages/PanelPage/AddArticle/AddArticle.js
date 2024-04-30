@@ -38,15 +38,17 @@ const AddArticle = () => {
 
     if (isAnyFieldEmpty) {
       // If any required field is empty, display an error modal
-      setModalToggle(2); // Setting modalToggle to 2 to display error modal
+      setModalToggle(2);
+      console.log("zzzzz"); // Setting modalToggle to 2 to display error modal
       return; // Stop further execution
     }
+    console.log(formData);
     axios
       .post("http://localhost/react/api/articles/", formData)
       .then((response) => {
         if (response.status === 200) {
           setModalToggle(1);
-          console.log(response.data);
+          console.log(response.data.data);
         }
       })
       .catch((error) => {
@@ -102,7 +104,7 @@ const AddArticle = () => {
               />
             </div>
             <div className="addArticle-input">
-              <label htmlFor="desc" className="addArticle-form-tag">
+              <label htmlFor="description" className="addArticle-form-tag">
                 Description:{" "}
               </label>
               <input
@@ -110,7 +112,7 @@ const AddArticle = () => {
                 value={formData.description}
                 onChange={formHandler}
                 type="text"
-                placeholder="Insert  description"
+                placeholder="Insert description"
                 required
               />
             </div>

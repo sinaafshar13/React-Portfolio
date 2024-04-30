@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Mixitup from "mixitup";
 import "./Articles.css";
 import axios from "axios";
-import ArticleItem from "./ArticleItem";
+import ArticleItem from "../../../components/ArticlesItem/ArticleItem";
 const Articles = () => {
   //get api
   const [articles, setArticles] = useState([]);

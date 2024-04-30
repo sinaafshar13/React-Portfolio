@@ -10,7 +10,7 @@ import Articles from "./pages/PanelPage/Articles/Articles";
 import ArticlePage from "./pages/PanelPage/ArticlePage/ArticlePage";
 import JourneyJournal from "./pages/JourneyJournal/JourneyJournal";
 import ArticlesList from "./pages/ArticlesList/ArticlesList";
-
+import CoursesList from "./pages/CoursesList/CoursesList";
 const routes = [
   { path: "/", element: <LandingPage /> },
   { path: "/loginPage", element: <LogInPage /> },
@@ -28,6 +28,14 @@ const routes = [
     element: (
       <PrivateRoutes>
         <ArticlesList />
+      </PrivateRoutes>
+    ),
+  },
+  {
+    path: "/coursesList",
+    element: (
+      <PrivateRoutes>
+        <CoursesList />
       </PrivateRoutes>
     ),
   },

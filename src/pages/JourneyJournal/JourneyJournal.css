@@ -1,0 +1,101 @@
+.journeyJournal-container {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.journeyJournal-data {
+  margin-left: 2rem;
+}
+.journeyJournal-info {
+  grid-template-columns: repeat(3, 140px);
+  gap: 0.5rem;
+  margin-bottom: var(--mb-2);
+}
+.journeyJournal-box {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.journeyJournal-icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+.journeyJournal-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+.journeyJournal-sub {
+  font-size: var(--tiny-font-size);
+}
+.journeyJournal-desc {
+  padding: 0 4rem 0 0;
+  margin-bottom: var(--mb-2-5);
+}
+.journeyJournal-img {
+  width: 350px;
+  border-radius: 1.5rem;
+  justify-self: center;
+  margin-right: 2rem;
+}
+.newSwiper-container {
+  width: 60%;
+}
+/* swiper class */
+.swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--title-color-dark) !important;
+}
+.newSwiper-item {
+  margin-bottom: var(--mb-1);
+}
+.swiper-pagination {
+  position: initial;
+}
+
+@media screen and (max-width: 992px) {
+  .newSwiper-container {
+    width: 80%;
+  }
+  .newSwiper-card {
+    padding: 1rem 1.5rem;
+  }
+  .journeyJournal-container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+  .journeyJournal-img {
+    width: 220px;
+    margin-right: initial;
+  }
+  .journeyJournal-box {
+    padding: 0.75rem 1rem;
+  }
+  .journeyJournal-data {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+  .journeyJournal-info {
+    justify-content: center;
+  }
+  .journeyJournal-desc {
+    padding: 0 5rem;
+    margin-bottom: var(--mb-2);
+  }
+}
+@media screen and (max-width: 576px) {
+  .journeyJournal-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .journeyJournal-desc {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .journeyJournal-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

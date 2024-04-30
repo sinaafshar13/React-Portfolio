@@ -1,48 +1,46 @@
 import React, { useEffect, useState } from "react";
 import Mixitup from "mixitup";
 import axios from "axios";
-import ArticleItem from "../../components/ArticlesItem/ArticleItem";
 import Footer from "../../components/Footer/Footer";
 import ScrollUp from "../../components/ScrollUp/ScrollUp";
 import PanelHeader from "../../components/PanelHeader/PanelHeader";
-
-import "./ArticlesList.css";
-const ArticlesList = () => {
+import CourseItem from "../../components/CourseItem/CourseItem";
+import "./CoursesList.css";
+import ArticleItem from "../../components/ArticlesItem/ArticleItem";
+const CoursesList = () => {
   //get api
-  const [articles, setArticles] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [sortType, setSortType] = useState("earliest");
   const [search, setSearch] = useState("");
   useEffect(() => {
-    if (sortType === "earliest") getArticlesByOrder("id", "desc");
-    else if (sortType === "latest") getArticlesByOrder("id", "asc");
-    else if (sortType === "longest") getArticlesByOrder("readingTime", "desc");
-    else if (sortType === "shortest") getArticlesByOrder("readingTime", "asc");
+    if (sortType === "earliest") getCoursesByOrder("id", "desc");
+    else if (sortType === "latest") getCoursesByOrder("id", "asc");
+    else if (sortType === "longest") getCoursesByOrder("studentCount", "desc");
+    else if (sortType === "shortest") getCoursesByOrder("studentCount", "asc");
   }, [sortType]);
   const sortHandler = (e) => {
     setSortType(e.target.value);
   };
-  const getArticlesByOrder = (column, order) => {
+  const getCoursesByOrder = (column, order) => {
     axios
       .get(
-        `http://localhost/react/api/articles/?column=${column}&order=${order}`
+        `http://localhost/react/api/courses/?column=${column}&order=${order}`
       )
-      .then((response) => setArticles(response.data.data));
+      .then((response) => setCourses(response.data.data));
   };
   const searchHandler = (e) => {
     setSearch(e.target.value);
   };
-  const getArticlesBySearch = () => {
+  const getCoursesBySearch = () => {
     axios
-      .get(
-        `http://localhost/react/api/articles/?column=writer&search=${search}`
-      )
-      .then((response) => setArticles(response.data.data));
+      .get(`http://localhost/react/api/courses/?column=teacher&search=${search}`)
+      .then((response) => setCourses(response.data.data));
   };
   // TODO mixitup
   // useEffect(() => {
-  //   Mixitup(".articles-container", {
+  //   Mixitup(".courses-container", {
   //     selectors: {
-  //       target: ".articles-card",
+  //       target: ".courses-card",
   //     },
   //     animation: {
   //       duration: 500,
@@ -57,7 +55,7 @@ const ArticlesList = () => {
   // ==========> accordion <==========
   const [items, setItems] = useState([
     {
-      title: "Sorting articles",
+      title: "Sorting courses",
       content: (
         <div className="accordion-content-texts">
           <label>
@@ -159,17 +157,17 @@ const ArticlesList = () => {
     <>
       <PanelHeader />
       <main className="main section">
-        <section className="articles container mb-1" id="articles">
-          <div className="articlesList-header-container">
-            <h2 className="section-title">Articles List</h2>
-            <div className="articlesList-search-container">
+        <section className="courses container mb-1" id="courses">
+          <div className="coursesList-header-container">
+            <h2 className="section-title">courses List</h2>
+            <div className="coursesList-search-container">
               <input
                 onChange={searchHandler}
                 type="text"
                 className="search-container-input"
               />
               <button
-                onClick={getArticlesBySearch}
+                onClick={getCoursesBySearch}
                 className="button button-flex search-container-button"
               >
                 <i className="bx bx-search search-container-button-icon"></i>
@@ -178,14 +176,14 @@ const ArticlesList = () => {
             </div>
           </div>
 
-          <div className="articles-pages">
-            <div className="div articles-filters">
+          <div className="courses-pages">
+            <div className="div courses-filters">
               <span
                 onClick={() => toggleFilter(0)}
                 className={
                   itemToggle === 0
-                    ? "articles-filter articles-filter-active"
-                    : "articles-filter"
+                    ? "courses-filter courses-filter-active"
+                    : "courses-filter"
                 }
                 data-filter=".all"
               >
@@ -195,8 +193,8 @@ const ArticlesList = () => {
                 onClick={() => toggleFilter(1)}
                 className={
                   itemToggle === 1
-                    ? "articles-filter articles-filter-active"
-                    : "articles-filter"
+                    ? "courses-filter courses-filter-active"
+                    : "courses-filter"
                 }
                 data-filter=".web"
               >
@@ -206,8 +204,8 @@ const ArticlesList = () => {
                 onClick={() => toggleFilter(2)}
                 className={
                   itemToggle === 2
-                    ? "articles-filter articles-filter-active"
-                    : "articles-filter"
+                    ? "courses-filter courses-filter-active"
+                    : "courses-filter"
                 }
                 data-filter=".app"
               >
@@ -217,8 +215,8 @@ const ArticlesList = () => {
                 onClick={() => toggleFilter(3)}
                 className={
                   itemToggle === 3
-                    ? "articles-filter articles-filter-active"
-                    : "articles-filter"
+                    ? "courses-filter courses-filter-active"
+                    : "courses-filter"
                 }
                 data-filter=".support"
               >
@@ -226,8 +224,8 @@ const ArticlesList = () => {
               </span>
             </div>
           </div>
-          <div className="articlesList-section">
-            <div className="articlesList-accordion">
+          <div className="coursesList-section">
+            <div className="coursesList-accordion">
               <div className="accordion">
                 {items.map((item, index) => (
                   <div key={index} className={"accordion-item"}>
@@ -261,20 +259,16 @@ const ArticlesList = () => {
                 ))}
               </div>
             </div>
-            {articles.length === 0 ? (
+            {courses.length === 0 ? (
               <p className="empty-search-alert">
                 !!!Sorry we don't find any article that match... try again
                 please
               </p>
             ) : (
-              <div className="articlesList-container">
-                {articles.map((article) => (
-                  <div
-                    key={article.id}
-                    className={`all ${article.category}`}
-                    data-filter={article.category}
-                  >
-                    <ArticleItem {...article} />
+              <div className="coursesList-container">
+                {courses.map((course) => (
+                  <div key={course.id} className={`all ${course.category}`}>
+                    <CourseItem {...course} />
                   </div>
                 ))}
               </div>
@@ -288,4 +282,4 @@ const ArticlesList = () => {
   );
 };
 
-export default ArticlesList;
+export default CoursesList;

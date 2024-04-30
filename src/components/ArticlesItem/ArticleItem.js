@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
+import "./ArticlesItem.css"
 const ArticleItem = ({
   id,
   title,
@@ -9,10 +10,6 @@ const ArticleItem = ({
   writer,
   category,
 }) => {
-  const [modalToggle, setModalToggle] = useState(0);
-  const Modal = (index) => {
-    setModalToggle(index);
-  };
   return (
     <div className={`articles-card all ${category}`}>
       <img className="article-img" src={image} alt="" />

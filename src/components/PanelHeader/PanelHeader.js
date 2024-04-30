@@ -80,6 +80,22 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link
+                onClick={() => {
+                  activeLink("#courses-list");
+                }}
+                to="/coursesList"
+                className={
+                  active === "#courses-list"
+                    ? "nav-link active-link"
+                    : "nav-link"
+                }
+              >
+                <i className="bi bi-layout-text-sidebar nav-icon"></i>
+                Courses
+              </Link>
+            </li>
+            <li className="nav-item">
               {isLogin() ? (
                 <Link
                   onClick={() => {

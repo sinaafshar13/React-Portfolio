@@ -38,9 +38,9 @@ const ArticlesList = () => {
       )
       .then((response) => setArticles(response.data.data));
   };
-  // TODO mixitup
-  // useEffect(() => {
-  //   Mixitup(".articles-container", {
+  // TODO useEffect(() => {
+  //   console.log("mixitup");
+  //   Mixitup(".articlesList-container", {
   //     selectors: {
   //       target: ".articles-card",
   //     },
@@ -49,6 +49,7 @@ const ArticlesList = () => {
   //     },
   //   });
   // }, []);
+
   // active portfolio item
   const [itemToggle, setItemToggle] = useState(0);
   const toggleFilter = (index) => {
@@ -272,7 +273,6 @@ const ArticlesList = () => {
                   <div
                     key={article.id}
                     className={`all ${article.category}`}
-                    data-filter={article.category}
                   >
                     <ArticleItem {...article} />
                   </div>

@@ -42,7 +42,7 @@
   margin-top: var(--mb-1);
   border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: var(--container-color);
   font-size: var(--normal-font-size);
   background-color: var(--text-color);
@@ -145,7 +145,7 @@ input[type="radio"]:checked {
       padding: 0.564rem;
     }
   }
-
+  
   .articlesList-container {
     grid-template-columns: repeat(2, 280px);
   }
@@ -167,7 +167,7 @@ input[type="radio"]:checked {
     display: grid;
     column-gap: 0.25rem;
     justify-content: center;
-    grid-template-columns: repeat(3 , max-content);
+    grid-template-columns: repeat(3, max-content);
   }
   .accordion-header span {
     margin-left: 2rem;

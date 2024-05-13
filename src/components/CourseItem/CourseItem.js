@@ -12,7 +12,7 @@ const CourseItem = ({
   category,
 }) => {
   return (
-    <div className={`courses-card all ${category}`}>
+    <div className={`courses-card ${category}`}>
       <div className="course-card-img">
         <img className="course-img" src={image} alt="" />
         <span className="course-users">

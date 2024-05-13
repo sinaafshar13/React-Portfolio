@@ -63,9 +63,10 @@
 .footer-price {
     display: inline-flex;
   align-items: center;
-  .clock-icon {
-    margin-left: var(--mb-0-25);
-  }
+  font-size: var(--tiny-font-size);
+  font-weight: var(--font-semi-bold);
+  
+  
 }
 .footer-price-icon {
   font-size: var(--normal-font-size);

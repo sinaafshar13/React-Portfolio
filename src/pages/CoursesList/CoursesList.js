@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Mixitup from "mixitup";
 import axios from "axios";
 import Footer from "../../components/Footer/Footer";
@@ -6,18 +6,40 @@ import ScrollUp from "../../components/ScrollUp/ScrollUp";
 import PanelHeader from "../../components/PanelHeader/PanelHeader";
 import CourseItem from "../../components/CourseItem/CourseItem";
 import "./CoursesList.css";
-import ArticleItem from "../../components/ArticlesItem/ArticleItem";
 const CoursesList = () => {
   //get api
   const [courses, setCourses] = useState([]);
   const [sortType, setSortType] = useState("earliest");
   const [search, setSearch] = useState("");
+  const accordionRef = useRef(null);
+
   useEffect(() => {
-    if (sortType === "earliest") getCoursesByOrder("id", "desc");
-    else if (sortType === "latest") getCoursesByOrder("id", "asc");
-    else if (sortType === "longest") getCoursesByOrder("studentCount", "desc");
-    else if (sortType === "shortest") getCoursesByOrder("studentCount", "asc");
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleClickOutside = (index) => {
+    if (accordionRef.current && !accordionRef.current.contains(index.target)) {
+      setItems((prevState) =>
+        prevState.map((item, i) =>
+          i === index
+            ? { ...item, isOpen: !item.isOpen }
+            : { ...item, isOpen: false }
+        )
+      );
+    }
+  };
+  useEffect(() => {
+    setItemToggle(0);
+    if (sortType === "earliest") getCoursesByOrder("id", "asc");
+    else if (sortType === "latest") getCoursesByOrder("id", "desc");
+    else if (sortType === "high-price") getCoursesByOrder("mainPrice", "desc");
+    else if (sortType === "low-price") getCoursesByOrder("mainPrice", "asc");
   }, [sortType]);
+
   const sortHandler = (e) => {
     setSortType(e.target.value);
   };
@@ -33,7 +55,9 @@ const CoursesList = () => {
   };
   const getCoursesBySearch = () => {
     axios
-      .get(`http://localhost/react/api/courses/?column=teacher&search=${search}`)
+      .get(
+        `http://localhost/react/api/courses/?column=teacher&search=${search}`
+      )
       .then((response) => setCourses(response.data.data));
   };
   // TODO mixitup
@@ -51,6 +75,14 @@ const CoursesList = () => {
   const [itemToggle, setItemToggle] = useState(0);
   const toggleFilter = (index) => {
     setItemToggle(index);
+    if (index === 0) getCoursesByOrder("id", "asc");
+    else if (index === 1) getCoursesByCategory("Frontend");
+    else if (index === 2) getCoursesByCategory("Backend");
+  };
+  const getCoursesByCategory = (category) => {
+    axios
+      .get(`http://localhost/react/api/courses/?category=${category}`)
+      .then((response) => setCourses(response.data.data));
   };
   // ==========> accordion <==========
   const [items, setItems] = useState([
@@ -65,7 +97,7 @@ const CoursesList = () => {
               name="sorting"
               value="earliest"
             />
-            <span className="accordion-content-text">Earliest</span>
+            <span className="accordion-content-text">earliest</span>
           </label>
           <label>
             <input
@@ -74,25 +106,25 @@ const CoursesList = () => {
               name="sorting"
               value="latest"
             />
-            <span className="accordion-content-text">Latest</span>
+            <span className="accordion-content-text">latest</span>
           </label>
           <label>
             <input
               onChange={sortHandler}
               type="radio"
               name="sorting"
-              value="longest"
+              value="low-price"
             />
-            <span className="accordion-content-text">Longest</span>
+            <span className="accordion-content-text">low Price</span>
           </label>
           <label>
             <input
               onChange={sortHandler}
               type="radio"
               name="sorting"
-              value="shortest"
+              value="high-price"
             />
-            <span className="accordion-content-text">Shortest</span>
+            <span className="accordion-content-text">high Price</span>
           </label>
         </div>
       ),
@@ -125,18 +157,18 @@ const CoursesList = () => {
               onChange={sortHandler}
               type="radio"
               name="sorting"
-              value="longest"
+              value="high-price"
             />
-            <span className="accordion-content-text">Longest</span>
+            <span className="accordion-content-text">high-price</span>
           </label>
           <label>
             <input
               onChange={sortHandler}
               type="radio"
               name="sorting"
-              value="shortest"
+              value="low-price"
             />
-            <span className="accordion-content-text">Shortest</span>
+            <span className="accordion-content-text">low-price</span>
           </label>
         </div>
       ),
@@ -153,13 +185,14 @@ const CoursesList = () => {
       )
     );
   };
+
   return (
     <>
       <PanelHeader />
       <main className="main section">
         <section className="courses container mb-1" id="courses">
           <div className="coursesList-header-container">
-            <h2 className="section-title">courses List</h2>
+            <h2 className="section-title">Courses List</h2>
             <div className="coursesList-search-container">
               <input
                 onChange={searchHandler}
@@ -185,7 +218,7 @@ const CoursesList = () => {
                     ? "courses-filter courses-filter-active"
                     : "courses-filter"
                 }
-                data-filter=".all"
+                // data-filter=".all"
               >
                 All
               </span>
@@ -196,9 +229,9 @@ const CoursesList = () => {
                     ? "courses-filter courses-filter-active"
                     : "courses-filter"
                 }
-                data-filter=".web"
+                // data-filter=".web"
               >
-                Web
+                Frontend
               </span>
               <span
                 onClick={() => toggleFilter(2)}
@@ -207,20 +240,9 @@ const CoursesList = () => {
                     ? "courses-filter courses-filter-active"
                     : "courses-filter"
                 }
-                data-filter=".app"
+                // data-filter=".app"
               >
-                App
-              </span>
-              <span
-                onClick={() => toggleFilter(3)}
-                className={
-                  itemToggle === 3
-                    ? "courses-filter courses-filter-active"
-                    : "courses-filter"
-                }
-                data-filter=".support"
-              >
-                Support
+                Backend
               </span>
             </div>
           </div>

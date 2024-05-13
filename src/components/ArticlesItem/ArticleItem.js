@@ -7,11 +7,10 @@ const ArticleItem = ({
   description,
   image,
   readingTime,
-  writer,
-  category,
+  writer
 }) => {
   return (
-    <div className={`articles-card all ${category}`}>
+    <div className="articles-card">
       <img className="article-img" src={image} alt="" />
       <div className="article-content">
         <h3 className="article-title">{title}</h3>

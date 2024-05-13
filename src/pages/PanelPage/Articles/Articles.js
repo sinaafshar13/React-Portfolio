@@ -83,7 +83,7 @@ const Articles = () => {
         {articles.map((article) => (
           <div
             key={article.id}
-            className={`articles-card all ${article.category}`}
+            className={`all ${article.category}`}
             data-filter={article.category}
           >
             <ArticleItem {...article} />

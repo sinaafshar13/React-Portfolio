@@ -1,4 +1,4 @@
-  <h1>🖥️ My Portfolio</h1>
+  <h1 id="head">🖥️ My Portfolio</h1>
 
 ![profile 8ae5ba9c25e2f6f444b0](https://github.com/sinaafshar13/React-Portfolio/assets/136085165/ad21bfbe-ab73-4c86-b06a-daadb6a0e009)
 
@@ -18,7 +18,7 @@
 
   <h2 id="projects">Project</h2>
     <h3>Full responsive web app</h3>
-    <a href="https://github.com/yourusername/awesome-web-app"><img src="https://img.shields.io/badge/View-Project-blue" alt="View Project"></a>
+    <a href="https://sinafolio.liara.run"><img src="https://img.shields.io/badge/View-Project-blue" alt="View Project"></a>
     <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -51,11 +51,12 @@
   <h2 id="contact">Contact</h2>
   <ul>
         <li>Email: yourname@example.com</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue" alt="LinkedIn Badge"></a></li>
-        <li>Website: <a href="https://yourwebsite.com"><img src="https://img.shields.io/badge/Website-Visit-blue" alt="Website Badge"></a></li>
-        <li>Telegram: <a href="https://t.me/yourusername"><img src="https://img.shields.io/badge/Telegram-Contact-blue" alt="Telegram Badge"></a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/sina-afshari-32b3bb288"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue" alt="LinkedIn Badge"></a></li>
+        <li>Website: <a href="https://sinafolio.liara.run"><img src="https://img.shields.io/badge/Website-Visit-blue" alt="Website Badge"></a></li>
+        <li>Telegram: <a href="https://t.me/SiNa13RiShe"><img src="https://img.shields.io/badge/Telegram-Contact-blue" alt="Telegram Badge"></a></li>
   </ul>
 
   <h2>Acknowledgments</h2>
   <p>Thank you to all the contributors and collaborators who helped make these projects successful.</p>
 
+[![Go to Top](https://img.shields.io/badge/Go_to_Top-Click_Here-blue.svg?style=flat-square)](#head)

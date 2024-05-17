@@ -25,7 +25,13 @@
         <li>JavaScript</li>
         <li>React</li>
     </ul>
+
+<h4>Desktop version screenshot</h4>
+
 ![Screenshot 2024-05-17 232926](https://github.com/sinaafshar13/React-Portfolio/assets/136085165/71c06de8-7aeb-4a89-930d-f408d0d432c8)
+
+<h4>Mobile version screenshot</h4>
+
 ![Screenshot 2024-05-17 233037](https://github.com/sinaafshar13/React-Portfolio/assets/136085165/ba9a74e5-8192-4416-9d1f-bb8105d60664)
 
 

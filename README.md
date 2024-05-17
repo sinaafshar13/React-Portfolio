@@ -50,7 +50,7 @@
 
   <h2 id="contact">Contact</h2>
   <ul>
-        <li>Email: yourname@example.com</li>
+        <li>Email: afshari.sina@outlook.com</li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/sina-afshari-32b3bb288"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue" alt="LinkedIn Badge"></a></li>
         <li>Website: <a href="https://sinafolio.liara.run"><img src="https://img.shields.io/badge/Website-Visit-blue" alt="Website Badge"></a></li>
         <li>Telegram: <a href="https://t.me/SiNa13RiShe"><img src="https://img.shields.io/badge/Telegram-Contact-blue" alt="Telegram Badge"></a></li>

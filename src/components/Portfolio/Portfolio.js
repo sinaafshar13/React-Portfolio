@@ -149,9 +149,9 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <div className="portfolio-card all web">
+        <div className="portfolio-card all web support">
           <img className="card-img" src={work2} alt="" />
-          <h3 className="card-title">Web Development</h3>
+          <h3 className="card-title">Fast-food Shop</h3>
           <span
             onClick={() => {
               Modal(2);
@@ -210,7 +210,7 @@ const Portfolio = () => {
         </div>
         <div className="portfolio-card all app">
           <img className="card-img" src={work3} alt="" />
-          <h3 className="card-title">Web Development</h3>
+          <h3 className="card-title">App Development</h3>
           <span
             onClick={() => {
               Modal(3);
@@ -328,7 +328,7 @@ const Portfolio = () => {
         </div>
         <div className="portfolio-card all app">
           <img className="card-img" src={work5} alt="" />
-          <h3 className="card-title">Web Development</h3>
+          <h3 className="card-title">App Development</h3>
           <span
             onClick={() => {
               Modal(5);
@@ -387,7 +387,7 @@ const Portfolio = () => {
         </div>
         <div className="portfolio-card all support">
           <img className="card-img" src={work2} alt="" />
-          <h3 className="card-title">Web Development</h3>
+          <h3 className="card-title">Finance</h3>
           <span
             onClick={() => {
               Modal(6);

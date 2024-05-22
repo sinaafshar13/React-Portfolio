@@ -95,7 +95,7 @@ const Qualification = () => {
                 <h3 className="qualification-title">wordpress Developer</h3>
                 <div className="qualification-sub">Tehran - Institute</div>
                 <div className="qualification-calender">
-                  <i className="bx bx-calendar"></i>2018 - 2017
+                  <i className="bx bx-calendar"></i>2017 - 2018
                 </div>
               </div>
             </div>

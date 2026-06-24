@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import ScrollUp from "../../components/ScrollUp/ScrollUp";
 import PortfolioData from "./PortfolioData";
 import { projects } from "./WorkData";
@@ -10,7 +9,6 @@ const PortfolioPages = () => {
   const portfolioInfo = projects.find((project) => project.id ==  portfolioId);
   return (
     <>
-      <Header />
       <main className="main">
         <br />
         <br />

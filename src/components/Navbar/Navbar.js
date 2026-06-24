@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./Header.css";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { isLogin } from "../../utils";
-const Header = () => {
+const Navbar = () => {
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     if (this.scrollY > 80) header.classList.add("header-border");
@@ -158,4 +158,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
